@@ -2,6 +2,8 @@
 
 :root {
 	--background: rgb(245, 245, 255);
+
+	--belleaqua: rgba(204, 205, 0, 1);
 }
 
 body {
@@ -14,11 +16,13 @@ a,
 button {
 	text-decoration: none;
 	color: inherit;
+	margin: 15px;
 }
 
 .header-link {
 	display: inline-block;
 	padding: 5px;
+	margin: 0;
 }
 
 header {
@@ -57,7 +61,6 @@ header {
 	box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.1);
 	background-color: rgba(255, 255, 255, 1);
 	padding: 15px;
-	margin: 15px;
 	width: 15vw;
 	height: 15vh;
 	border-radius: 0.5rem;
@@ -67,6 +70,8 @@ header {
 .header-link:hover {
 	background-color: rgba(0, 0, 0, 0.1);
 	border-radius: 0.5rem;
+	cursor: pointer;
+	user-select: none;
 }
 
 .category {
@@ -131,7 +136,7 @@ header {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-	border: 3px solid rgba(204, 205, 0, 1);
+	border: 3px solid var(--belleaqua);
 	border-radius: 0.5rem;
 }
 
@@ -140,11 +145,61 @@ header {
 	background-color: black;
 }
 
-@media only screen and (max-width: 800px) {
-	.category {
-		overflow: visible;
-	}
+.tab {
+	display: none;
+	box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.1);
+	background-color: rgba(255, 255, 255, 1);
+	padding: 15px;
+	margin: 15px;
+	border-radius: 0.5rem;
+}
 
+.tabcontent {
+	display: none;
+}
+
+.tab-active {
+	background-color: rgba(0, 0, 0, 0.1);
+}
+
+.tabbutton:hover {
+	background-color: rgba(0, 0, 0, 0.1);
+	cursor: pointer;
+	user-select: none;
+}
+
+.tabbutton {
+	padding: 5px;
+	padding-right: 15px;
+	padding-left: 15px;
+	margin: 0px;
+	border-bottom: 1px solid;
+	border-top-right-radius: 0.5rem;
+	border-top-left-radius: 0.5rem;
+}
+
+.active {
+	display: block;
+}
+
+.checkbox {
+	padding: 5px;
+}
+
+.checkbox:hover {
+	user-select: none;
+	cursor: pointer;
+	background-color: rgba(0, 255, 0, 0.2);
+}
+
+.checked {
+	background-color: var(--belleaqua);
+}
+.checked:hover {
+	background-color: rgba(255, 0, 0, 0.2);
+}
+
+@media only screen and (max-width: 800px) {
 	.flex-dir {
 		flex-direction: column;
 	}

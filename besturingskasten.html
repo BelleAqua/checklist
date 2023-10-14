@@ -12,48 +12,275 @@
 		<link rel="stylesheet" href="index.css" />
 
 		<script defer src="models/header.js"></script>
+		<script defer src="models/tabs.js"></script>
 	</head>
 	<body>
 		<header></header>
 		<div class="category">
 			<h1 class="title">Axylit</h1>
 			<div class="flex-dir">
-				<a href="#"><div class="component" id="aquafin">AQF</div></a>
-				<a href="#"><div class="component" id="pidpa"></div></a>
-				<a href="#"><div class="component" id="hydrotechnic"></div></a>
-				<a href="#"><div class="component" id="belleaqua">PART</div></a>
-				<a href="#"
+				<a onclick="openTab(event, 'axylit-aquafin')"><div class="component" id="aquafin">AQF</div></a>
+				<a onclick="openTab(event, 'axylit-pidpa')"><div class="component" id="pidpa"></div></a>
+				<a onclick="openTab(event, 'axylit-hydrotechnic')"><div class="component" id="hydrotechnic"></div></a>
+				<a onclick="openTab(event, 'axylit-belleaqua')"><div class="component" id="belleaqua">PART</div></a>
+				<a onclick="openTab(event, 'axylit-kebro')"
 					><div class="component" id=""><h1>KEBRO</h1></div></a
 				>
+			</div>
+
+			<div id="axylit-aquafin" class="tab">
+				<h1 class="title">Aquafin</h1>
+
+				<div class="flex-dir">
+					<a class="tabbutton tab-active" onclick="openList(event, 'aquafin-axylit-checklist')">Checklist</a>
+					<a class="tabbutton" onclick="openList(event, 'aquafin-axylit-logo')">Logo</a>
+					<a class="tabbutton" onclick="openList(event, 'aquafin-axylit-cmr')">CMR</a>
+					<a class="tabbutton" onclick="reset()">Reset</a>
+				</div>
+
+				<div class="tabcontent active" id="aquafin-axylit-checklist">
+					<div class="checkbox">CMR instellen op AQF</div>
+					<div class="checkbox">Voetjes in de kast</div>
+					<div class="checkbox">Schemas</div>
+					<div class="checkbox">bouten vast</div>
+					<div class="checkbox">antenne vast</div>
+				</div>
+				<div class="tabcontent" id="aquafin-axylit-logo">logo</div>
+				<div class="tabcontent" id="aquafin-axylit-cmr">cmr</div>
+			</div>
+
+			<div id="axylit-pidpa" class="tab">
+				<h1 class="title">PIDPA</h1>
+
+				<div class="flex-dir">
+					<a class="tabbutton tab-active" onclick="openList(event, 'pidpa-axylit-checklist')">Checklist</a>
+					<a class="tabbutton" onclick="openList(event, 'pidpa-axylit-logo')">Logo</a>
+					<a class="tabbutton" onclick="reset()">Reset</a>
+				</div>
+
+				<div class="tabcontent active" id="pidpa-axylit-checklist">checklist</div>
+				<div class="tabcontent" id="pidpa-axylit-logo">logo</div>
+			</div>
+
+			<div id="axylit-hydrotechnic" class="tab">
+				<h1 class="title">hydrotechnic</h1>
+
+				<div class="flex-dir">
+					<a class="tabbutton tab-active" onclick="openList(event, 'hydrotechnic-axylit-checklist')">Checklist</a>
+					<a class="tabbutton" onclick="openList(event, 'hydrotechnic-axylit-logo')">Logo</a>
+					<a class="tabbutton" onclick="reset()">Reset</a>
+				</div>
+
+				<div class="tabcontent active" id="hydrotechnic-axylit-checklist">checklist</div>
+				<div class="tabcontent" id="hydrotechnic-axylit-logo">logo</div>
+			</div>
+
+			<div id="axylit-belleaqua" class="tab">
+				<h1 class="title">BelleAqua</h1>
+
+				<div class="flex-dir">
+					<a class="tabbutton tab-active" onclick="openList(event, 'belleaqua-axylit-checklist')">Checklist</a>
+					<a class="tabbutton" onclick="openList(event, 'belleaqua-axylit-logo')">Logo</a>
+					<a class="tabbutton" onclick="openList(event, 'belleaqua-axylit-cmr')">CMR</a>
+					<a class="tabbutton" onclick="reset()">Reset</a>
+				</div>
+
+				<div class="tabcontent active" id="belleaqua-axylit-checklist">checklist</div>
+				<div class="tabcontent" id="belleaqua-axylit-logo">logo</div>
+				<div class="tabcontent" id="belleaqua-axylit-cmr">cmr</div>
+			</div>
+
+			<div id="axylit-kebro" class="tab">
+				<h1 class="title">KEBRO</h1>
+
+				<div class="flex-dir">
+					<a class="tabbutton tab-active" onclick="openList(event, 'kebro-axylit-checklist')">Checklist</a>
+					<a class="tabbutton" onclick="openList(event, 'kebro-axylit-logo')">Logo</a>
+					<a class="tabbutton" onclick="openList(event, 'kebro-axylit-cmr')">CMR</a>
+					<a class="tabbutton" onclick="reset()">Reset</a>
+				</div>
+
+				<div class="tabcontent active" id="kebro-axylit-checklist">checklist</div>
+				<div class="tabcontent" id="kebro-axylit-logo">logo</div>
+				<div class="tabcontent" id="kebro-axylit-cmr">cmr</div>
 			</div>
 		</div>
 
 		<div class="category">
-			<h1 class="title">SAF</h1>
+			<h1 class="title">SAF (Standaard Logo)</h1>
 			<div class="flex-dir">
-				<a href="#"><div class="component" id="aquafin">AQF</div></a>
-				<a href="#"><div class="component" id="hydrotechnic"></div></a>
-				<a href="#"><div class="component" id="belleaqua">PART</div></a>
+				<a onclick="openTab(event, 'saf-aquafin')"><div class="component" id="aquafin">AQF</div></a>
+				<a onclick="openTab(event, 'saf-hydrotechnic')"><div class="component" id="hydrotechnic"></div></a>
+				<a onclick="openTab(event, 'saf-belleaqua')"><div class="component" id="belleaqua">PART</div></a>
+			</div>
+
+			<div id="saf-aquafin" class="tab">
+				<h1 class="title">Aquafin</h1>
+
+				<div class="flex-dir">
+					<a class="tabbutton tab-active" onclick="openList(event, 'aquafin-saf-checklist')">Checklist</a>
+					<a class="tabbutton" onclick="openList(event, 'aquafin-saf-logo')">Logo</a>
+					<a class="tabbutton" onclick="openList(event, 'aquafin-saf-cmr')">CMR</a>
+					<a class="tabbutton" onclick="reset()">Reset</a>
+				</div>
+
+				<div class="tabcontent active" id="aquafin-saf-checklist">checklist</div>
+				<div class="tabcontent" id="aquafin-saf-logo">logo</div>
+				<div class="tabcontent" id="aquafin-saf-cmr">cmr</div>
+			</div>
+
+			<div id="saf-hydrotechnic" class="tab">
+				<h1 class="title">hydrotechnic</h1>
+
+				<div class="flex-dir">
+					<a class="tabbutton tab-active" onclick="openList(event, 'hydrotechnic-saf-checklist')">Checklist</a>
+					<a class="tabbutton" onclick="openList(event, 'hydrotechnic-saf-logo')">Logo</a>
+					<a class="tabbutton" onclick="reset()">Reset</a>
+				</div>
+
+				<div class="tabcontent active" id="hydrotechnic-saf-checklist">checklist</div>
+				<div class="tabcontent" id="hydrotechnic-saf-logo">logo</div>
+			</div>
+
+			<div id="saf-belleaqua" class="tab">
+				<h1 class="title">BelleAqua</h1>
+
+				<div class="flex-dir">
+					<a class="tabbutton tab-active" onclick="openList(event, 'belleaqua-saf-checklist')">Checklist</a>
+					<a class="tabbutton" onclick="openList(event, 'belleaqua-saf-logo')">Logo</a>
+					<a class="tabbutton" onclick="openList(event, 'belleaqua-saf-cmr')">CMR</a>
+					<a class="tabbutton" onclick="reset()">Reset</a>
+				</div>
+
+				<div class="tabcontent active" id="belleaqua-saf-checklist">checklist</div>
+				<div class="tabcontent" id="belleaqua-saf-logo">logo</div>
+				<div class="tabcontent" id="belleaqua-saf-cmr">cmr</div>
 			</div>
 		</div>
 
 		<div class="category">
 			<h1 class="title">SAF mTele zPP</h1>
 			<div class="flex-dir">
-				<a href="#"><div class="component" id="aquafin">AQF</div></a>
-				<a href="#"><div class="component" id="pidpa"></div></a>
-				<a href="#"><div class="component" id="hydrotechnic"></div></a>
-				<a href="#"><div class="component" id="belleaqua">PART</div></a>
+				<a onclick="openTab(event, 'saf-mTele-zPP-aquafin')"><div class="component" id="aquafin">AQF</div></a>
+				<a onclick="openTab(event, 'saf-mTele-zPP-hydrotechnic')"><div class="component" id="hydrotechnic"></div></a>
+				<a onclick="openTab(event, 'saf-mTele-zPP-belleaqua')"><div class="component" id="belleaqua">PART</div></a>
+			</div>
+
+			<div id="saf-mTele-zPP-aquafin" class="tab">
+				<h1 class="title">Aquafin</h1>
+
+				<div class="flex-dir">
+					<a class="tabbutton tab-active" onclick="openList(event, 'aquafin-saf-mTele-zPP-checklist')">Checklist</a>
+					<a class="tabbutton" onclick="openList(event, 'aquafin-saf-mTele-zPP-logo')">Logo</a>
+					<a class="tabbutton" onclick="openList(event, 'aquafin-saf-mTele-zPP-cmr')">CMR</a>
+					<a class="tabbutton" onclick="reset()">Reset</a>
+				</div>
+
+				<div class="tabcontent active" id="aquafin-saf-mTele-zPP-checklist">checklist</div>
+				<div class="tabcontent" id="aquafin-saf-mTele-zPP-logo">logo</div>
+				<div class="tabcontent" id="aquafin-saf-mTele-zPP-cmr">cmr</div>
+			</div>
+
+			<div id="saf-mTele-zPP-hydrotechnic" class="tab">
+				<h1 class="title">hydrotechnic</h1>
+
+				<div class="flex-dir">
+					<a class="tabbutton tab-active" onclick="openList(event, 'hydrotechnic-saf-mTele-zPP-checklist')">Checklist</a>
+					<a class="tabbutton" onclick="openList(event, 'hydrotechnic-saf-mTele-zPP-logo')">Logo</a>
+					<a class="tabbutton" onclick="reset()">Reset</a>
+				</div>
+
+				<div class="tabcontent active" id="hydrotechnic-saf-mTele-zPP-checklist">checklist</div>
+				<div class="tabcontent" id="hydrotechnic-saf-mTele-zPP-logo">logo</div>
+			</div>
+
+			<div id="saf-mTele-zPP-belleaqua" class="tab">
+				<h1 class="title">BelleAqua</h1>
+
+				<div class="flex-dir">
+					<a class="tabbutton tab-active" onclick="openList(event, 'belleaqua-saf-mTele-zPP-checklist')">Checklist</a>
+					<a class="tabbutton" onclick="openList(event, 'belleaqua-saf-mTele-zPP-logo')">Logo</a>
+					<a class="tabbutton" onclick="openList(event, 'belleaqua-saf-mTele-zPP-cmr')">CMR</a>
+					<a class="tabbutton" onclick="reset()">Reset</a>
+				</div>
+
+				<div class="tabcontent active" id="belleaqua-saf-mTele-zPP-checklist">checklist</div>
+				<div class="tabcontent" id="belleaqua-saf-mTele-zPP-logo">logo</div>
+				<div class="tabcontent" id="belleaqua-saf-mTele-zPP-cmr">cmr</div>
 			</div>
 		</div>
 
 		<div class="category">
 			<h1 class="title">SAF mTele mPP</h1>
 			<div class="flex-dir">
-				<a href="#"><div class="component" id="aquafin">AQF</div></a>
-				<a href="#"><div class="component" id="pidpa"></div></a>
-				<a href="#"><div class="component" id="hydrotechnic"></div></a>
-				<a href="#"><div class="component" id="belleaqua">PART</div></a>
+				<a onclick="openTab(event, 'saf-mTele-mPP-aquafin')"><div class="component" id="aquafin">AQF</div></a>
+				<a onclick="openTab(event, 'saf-mTele-mPP-hydrotechnic')"><div class="component" id="hydrotechnic"></div></a>
+				<a onclick="openTab(event, 'saf-mTele-mPP-belleaqua')"><div class="component" id="belleaqua">PART</div></a>
+			</div>
+
+			<div id="saf-mTele-mPP-aquafin" class="tab">
+				<h1 class="title">Aquafin</h1>
+
+				<div class="flex-dir">
+					<a class="tabbutton tab-active" onclick="openList(event, 'aquafin-saf-mTele-mPP-checklist')">Checklist</a>
+					<a class="tabbutton" onclick="openList(event, 'aquafin-saf-mTele-mPP-logo')">Logo</a>
+					<a class="tabbutton" onclick="openList(event, 'aquafin-saf-mTele-mPP-cmr')">CMR</a>
+					<a class="tabbutton" onclick="reset()">Reset</a>
+				</div>
+
+				<div class="tabcontent active" id="aquafin-saf-mTele-mPP-checklist">checklist</div>
+				<div class="tabcontent" id="aquafin-saf-mTele-mPP-logo">logo</div>
+				<div class="tabcontent" id="aquafin-saf-mTele-mPP-cmr">cmr</div>
+			</div>
+
+			<div id="saf-mTele-mPP-hydrotechnic" class="tab">
+				<h1 class="title">hydrotechnic</h1>
+
+				<div class="flex-dir">
+					<a class="tabbutton tab-active" onclick="openList(event, 'hydrotechnic-saf-mTele-mPP-checklist')">Checklist</a>
+					<a class="tabbutton" onclick="openList(event, 'hydrotechnic-saf-mTele-mPP-logo')">Logo</a>
+					<a class="tabbutton" onclick="reset()">Reset</a>
+				</div>
+
+				<div class="tabcontent active" id="hydrotechnic-saf-mTele-mPP-checklist">checklist</div>
+				<div class="tabcontent" id="hydrotechnic-saf-mTele-mPP-logo">logo</div>
+			</div>
+
+			<div id="saf-mTele-mPP-belleaqua" class="tab">
+				<h1 class="title">BelleAqua</h1>
+
+				<div class="flex-dir">
+					<a class="tabbutton tab-active" onclick="openList(event, 'belleaqua-saf-mTele-mPP-checklist')">Checklist</a>
+					<a class="tabbutton" onclick="openList(event, 'belleaqua-saf-mTele-mPP-logo')">Logo</a>
+					<a class="tabbutton" onclick="openList(event, 'belleaqua-saf-mTele-mPP-cmr')">CMR</a>
+					<a class="tabbutton" onclick="reset()">Reset</a>
+				</div>
+
+				<div class="tabcontent active" id="belleaqua-saf-mTele-mPP-checklist">checklist</div>
+				<div class="tabcontent" id="belleaqua-saf-mTele-mPP-logo">logo</div>
+				<div class="tabcontent" id="belleaqua-saf-mTele-mPP-cmr">cmr</div>
+			</div>
+		</div>
+
+		<div class="category">
+			<h1 class="title">Verkaveling</h1>
+			<div class="flex-dir">
+				<a onclick="openTab(event, 'verkaveling-pidpa')"><div class="component" id="pidpa"></div></a>
+			</div>
+
+			<div id="verkaveling-pidpa" class="tab">
+				<h1 class="title">PIDPA</h1>
+
+				<div class="flex-dir">
+					<a class="tabbutton tab-active" onclick="openList(event, 'pidpa-verkaveling-checklist')">Checklist</a>
+					<a class="tabbutton" onclick="openList(event, 'pidpa-verkaveling-logo')">Logo</a>
+					<a class="tabbutton" onclick="openList(event, 'pidpa-verkaveling-logo')">Logo</a>
+					<a class="tabbutton" onclick="reset()">Reset</a>
+				</div>
+
+				<div class="tabcontent active" id="pidpa-verkaveling-checklist">checklist</div>
+				<div class="tabcontent" id="pidpa-verkaveling-logo">logo</div>
+				<div class="tabcontent" id="pidpa-verkaveling-logo">logo</div>
 			</div>
 		</div>
 	</body>
