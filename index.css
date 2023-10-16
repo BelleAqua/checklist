@@ -2,7 +2,6 @@
 
 :root {
 	--background: rgb(245, 245, 255);
-
 	--belleaqua: rgba(204, 205, 0, 1);
 }
 
@@ -12,11 +11,23 @@ body {
 	margin: 0px;
 }
 
-a,
-button {
+button,
+a {
 	text-decoration: none;
 	color: inherit;
 	margin: 15px;
+}
+
+button,
+input {
+	border: 1px solid black;
+	border-radius: 0.5rem;
+	padding: 5px;
+}
+
+button:hover {
+	cursor: pointer;
+	background-color: var(--belleaqua);
 }
 
 .header-link {
@@ -38,6 +49,12 @@ header {
 	flex-direction: row;
 	justify-content: space-between;
 	z-index: 1;
+}
+
+.pw {
+	display: none;
+	background-color: rgba(255, 0, 0, 0.5);
+	border-radius: 0.5rem;
 }
 
 .header {

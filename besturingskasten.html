@@ -7,12 +7,13 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 		<title>BelleAqua | BK</title>
-		<link rel="icon" href="favicon.png" type="image/x-icon" />
+		<link rel="icon" href="assets/favicon.png" type="image/x-icon" />
 
 		<link rel="stylesheet" href="index.css" />
 
 		<script defer src="models/header.js"></script>
 		<script defer src="models/tabs.js"></script>
+		<script defer src="models/login.js"></script>
 	</head>
 	<body>
 		<header></header>
@@ -39,11 +40,20 @@
 				</div>
 
 				<div class="tabcontent active" id="aquafin-axylit-checklist">
-					<div class="checkbox">CMR instellen op AQF</div>
-					<div class="checkbox">Voetjes in de kast</div>
-					<div class="checkbox">Schemas</div>
-					<div class="checkbox">bouten vast</div>
-					<div class="checkbox">antenne vast</div>
+					<div class="checkbox">Telemetrie > users > users/groups > ✔️ Aquafin ❌ Alert</div>
+					<div class="checkbox">Binnenwerk vastgezet</div>
+					<div class="checkbox">Voetjes in kast</div>
+					<div class="checkbox">ID nr in kast</div>
+					<div class="checkbox">Antenne vastzetten</div>
+					<div class="checkbox">Patchkabel ingestokken</div>
+					<div class="checkbox">Afdekplaat met deelbare afdekstrip in kast</div>
+					<div class="checkbox">Binnenkant sticker ingevuld</div>
+					<div class="checkbox">GSM n° op blad</div>
+					<div class="checkbox">GSM kaart op blad nieten</div>
+					<div class="checkbox">Blad volledig ingevuld ( KP nummer , werfadres , Benornummer , datum , ID nr rechts onderaan )</div>
+					<div class="checkbox">Foto van het invulblad mailen naar : magazijn@belleaqua.be</div>
+					<div class="checkbox">Elektrisch schema in document houder</div>
+					<div class="checkbox">Sticker AQF vooraan</div>
 				</div>
 				<div class="tabcontent" id="aquafin-axylit-logo">logo</div>
 				<div class="tabcontent" id="aquafin-axylit-cmr">cmr</div>
@@ -58,7 +68,18 @@
 					<a class="tabbutton" onclick="reset()">Reset</a>
 				</div>
 
-				<div class="tabcontent active" id="pidpa-axylit-checklist">checklist</div>
+				<div class="tabcontent active" id="pidpa-axylit-checklist">
+					<div class="checkbox">Aardingsmateriaal onderaan in kast gelegd</div>
+					<div class="checkbox">Binnenwerk vastgezet</div>
+					<div class="checkbox">Voetjes in kast</div>
+					<div class="checkbox">ID nr in kast</div>
+					<div class="checkbox">Afdekplaat met deelbare afdekstrip in kast</div>
+					<div class="checkbox">Binnenkant sticker ingevuld</div>
+					<div class="checkbox">Identificatiepapier volledig ingevuld (Benornummer, datum en ID nr rechts onderaan)</div>
+					<div class="checkbox">Foto van het identificatiepapier mailen naar: magazijn@belleaqua.be</div>
+					<div class="checkbox">Elektrisch schema in document houder (geplastifieërd A5 en op papier A4)</div>
+					<div class="checkbox">Sticker vooraan PIDPA + belleaqua zonder telefoonnummer</div>
+				</div>
 				<div class="tabcontent" id="pidpa-axylit-logo">logo</div>
 			</div>
 
@@ -71,7 +92,17 @@
 					<a class="tabbutton" onclick="reset()">Reset</a>
 				</div>
 
-				<div class="tabcontent active" id="hydrotechnic-axylit-checklist">checklist</div>
+				<div class="tabcontent active" id="hydrotechnic-axylit-checklist">
+					<div class="checkbox">Binnenwerk vastgezet</div>
+					<div class="checkbox">Voetjes in kast</div>
+					<div class="checkbox">ID nr in kast</div>
+					<div class="checkbox">Afdekplaat met deelbare afdekstrip in kast</div>
+					<div class="checkbox">Binnenkant sticker ingevuld (Kleine CE)</div>
+					<div class="checkbox">Identificatiepapier volledig ingevuld (datum en ID nr rechts onderaan)</div>
+					<div class="checkbox">Identificatiepapier kopieëren (Kopie HydroTechnic, origineel kast)</div>
+					<div class="checkbox">Elektrisch schema in document houder (geplastifieërd A5 en op papier A4)</div>
+					<div class="checkbox">Sticker vooraan HydroTechnic</div>
+				</div>
 				<div class="tabcontent" id="hydrotechnic-axylit-logo">logo</div>
 			</div>
 
@@ -94,13 +125,26 @@
 				<h1 class="title">KEBRO</h1>
 
 				<div class="flex-dir">
-					<a class="tabbutton tab-active" onclick="openList(event, 'kebro-axylit-checklist')">Checklist</a>
+					<a class="tabbutton tab-active" onclick="openList(event, 'kebro-axylit-checklist')"> Checklist </a>
 					<a class="tabbutton" onclick="openList(event, 'kebro-axylit-logo')">Logo</a>
 					<a class="tabbutton" onclick="openList(event, 'kebro-axylit-cmr')">CMR</a>
 					<a class="tabbutton" onclick="reset()">Reset</a>
 				</div>
 
-				<div class="tabcontent active" id="kebro-axylit-checklist">checklist</div>
+				<div class="tabcontent active" id="kebro-axylit-checklist">
+					<p>KEBRO ombouw is alleen het binnenwerk!</p>
+					<div class="checkbox">4 metalen houders voor binnenwerk</div>
+					<div class="checkbox">4 plastieke houders voor afdekplaat</div>
+					<div class="checkbox">Antenne</div>
+					<div class="checkbox">Afdekplaat + blindplaatjes</div>
+					<div class="checkbox">Document houder + sticker (medium)</div>
+					<div class="checkbox">sticker invullen</div>
+					<div class="checkbox">Ø16 Aardingsklem</div>
+					<div class="checkbox">Elektrische schema's</div>
+					<div class="checkbox">Aquafin stickers</div>
+					<div class="checkbox">Identificatiepapier volledig ingevuld (Benornummer, datum en ID nr rechts onderaan)</div>
+					<div class="checkbox">Foto van het identificatiepapier mailen naar: magazijn@belleaqua.be</div>
+				</div>
 				<div class="tabcontent" id="kebro-axylit-logo">logo</div>
 				<div class="tabcontent" id="kebro-axylit-cmr">cmr</div>
 			</div>
@@ -152,7 +196,20 @@
 					<a class="tabbutton" onclick="reset()">Reset</a>
 				</div>
 
-				<div class="tabcontent active" id="belleaqua-saf-checklist">checklist</div>
+				<div class="tabcontent active" id="belleaqua-saf-checklist">
+					<div class="checkbox">4x bout in kast en vastgezet</div>
+					<div class="checkbox">voetjes in kast</div>
+					<div class="checkbox">ID nr IN kast</div>
+					<div class="checkbox">afdekplaat met deelbare afdekstrip in kast</div>
+					<div class="checkbox">afdekplaat met 4 kunststof moeren vastgezet</div>
+					<div class="checkbox">bi kant sticker ingeplakt maar niets noteren</div>
+					<div class="checkbox">elektrisch schema in document houder</div>
+					<div class="checkbox">rubber 90° voor blower twee maal vastgezet met metalen klemring</div>
+					<div class="checkbox">blad volledig ingevuld ( serienummer blower , datum , ID nr rechts onderaan )</div>
+					<div class="checkbox">foto van het invulblad mailen naar : magazijn@belleaqua.be</div>
+					<div class="checkbox">sticker belleaqua met telefoonnummer vooraan</div>
+					<div class="checkbox">kort blauw (slibretour) en zwart (debietregeling) buisje in aansluiting steken</div>
+				</div>
 				<div class="tabcontent" id="belleaqua-saf-logo">logo</div>
 				<div class="tabcontent" id="belleaqua-saf-cmr">cmr</div>
 			</div>
@@ -204,7 +261,25 @@
 					<a class="tabbutton" onclick="reset()">Reset</a>
 				</div>
 
-				<div class="tabcontent active" id="belleaqua-saf-mTele-zPP-checklist">checklist</div>
+				<div class="tabcontent active" id="belleaqua-saf-mTele-zPP-checklist">
+					<div class="checkbox">modem : alert afzetten en AQF aanzetten / user groups / recip groups</div>
+					<div class="checkbox">4x bout in kast en vastgezet</div>
+					<div class="checkbox">voetjes in kast</div>
+					<div class="checkbox">antenne vastzetten</div>
+					<div class="checkbox">patchkabel ingestokken</div>
+					<div class="checkbox">ID nr IN kast</div>
+					<div class="checkbox">afdekplaat met deelbare afdekstrip in kast</div>
+					<div class="checkbox">afdekplaat met 4 kunststof moeren vastgezet</div>
+					<div class="checkbox">bi kant sticker ingeplakt maar niets noteren</div>
+					<div class="checkbox">elektrisch schema in document houder</div>
+					<div class="checkbox">rubber 90° voor blower twee maal vastgezet met metalen klemring</div>
+					<div class="checkbox">blad volledig ingevuld ( KP nummer , werfadres , serienummer blower , datum , ID nr rechts onderaan )</div>
+					<div class="checkbox">GSM n° op blad</div>
+					<div class="checkbox">GSM kaart op blad nieten</div>
+					<div class="checkbox">foto van het invulblad mailen naar : magazijn@belleaqua.be</div>
+					<div class="checkbox">sticker AQF vooraan</div>
+					<div class="checkbox">kort blauw (slibretour) en zwart (debietregeling) buisje in aansluiting steken</div>
+				</div>
 				<div class="tabcontent" id="belleaqua-saf-mTele-zPP-logo">logo</div>
 				<div class="tabcontent" id="belleaqua-saf-mTele-zPP-cmr">cmr</div>
 			</div>
@@ -256,7 +331,25 @@
 					<a class="tabbutton" onclick="reset()">Reset</a>
 				</div>
 
-				<div class="tabcontent active" id="belleaqua-saf-mTele-mPP-checklist">checklist</div>
+				<div class="tabcontent active" id="belleaqua-saf-mTele-mPP-checklist">
+					<div class="checkbox">modem : alert afzetten en AQF aanzetten / user groups / recip groups</div>
+					<div class="checkbox">4x bout in kast en vastgezet</div>
+					<div class="checkbox">voetjes in kast</div>
+					<div class="checkbox">antenne vastzetten</div>
+					<div class="checkbox">patchkabel ingestokken</div>
+					<div class="checkbox">ID nr IN kast</div>
+					<div class="checkbox">afdekplaat met deelbare afdekstrip in kast</div>
+					<div class="checkbox">afdekplaat met 4 kunststof moeren vastgezet</div>
+					<div class="checkbox">bi kant sticker ingeplakt maar niets noteren</div>
+					<div class="checkbox">elektrisch schema in document houder</div>
+					<div class="checkbox">rubber 90° voor blower twee maal vastgezet met metalen klemring</div>
+					<div class="checkbox">blad volledig ingevuld ( KP nummer , werfadres , serienummer blower , datum , ID nr rechts onderaan )</div>
+					<div class="checkbox">GSM n° op blad</div>
+					<div class="checkbox">GSM kaart op blad nieten</div>
+					<div class="checkbox">foto van het invulblad mailen naar : magazijn@belleaqua.be</div>
+					<div class="checkbox">sticker AQF vooraan</div>
+					<div class="checkbox">kort blauw (slibretour) en zwart (debietregeling) buisje in aansluiting steken</div>
+				</div>
 				<div class="tabcontent" id="belleaqua-saf-mTele-mPP-logo">logo</div>
 				<div class="tabcontent" id="belleaqua-saf-mTele-mPP-cmr">cmr</div>
 			</div>
