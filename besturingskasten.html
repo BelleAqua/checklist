@@ -286,6 +286,71 @@
 		</div>
 
 		<div class="category">
+			<h1 class="title">SAF zTele mPP</h1>
+			<div class="flex-dir">
+				<a onclick="openTab(event, 'saf-mTele-zPP-aquafin')"><div class="component" id="aquafin">AQF</div></a>
+				<a onclick="openTab(event, 'saf-mTele-zPP-hydrotechnic')"><div class="component" id="hydrotechnic"></div></a>
+				<a onclick="openTab(event, 'saf-mTele-zPP-belleaqua')"><div class="component" id="belleaqua">PART</div></a>
+			</div>
+
+			<div id="saf-mTele-zPP-aquafin" class="tab">
+				<h1 class="title">Aquafin</h1>
+
+				<div class="flex-dir">
+					<a class="tabbutton tab-active" onclick="openList(event, 'aquafin-saf-mTele-zPP-checklist')">Checklist</a>
+					<a class="tabbutton" onclick="openList(event, 'aquafin-saf-mTele-zPP-logo')">Logo</a>
+					<a class="tabbutton" onclick="openList(event, 'aquafin-saf-mTele-zPP-cmr')">CMR</a>
+					<a class="tabbutton" onclick="reset()">Reset</a>
+				</div>
+
+				<div class="tabcontent active" id="aquafin-saf-mTele-zPP-checklist">checklist</div>
+				<div class="tabcontent" id="aquafin-saf-mTele-zPP-logo">logo</div>
+				<div class="tabcontent" id="aquafin-saf-mTele-zPP-cmr">cmr</div>
+			</div>
+
+			<div id="saf-mTele-zPP-hydrotechnic" class="tab">
+				<h1 class="title">hydrotechnic</h1>
+
+				<div class="flex-dir">
+					<a class="tabbutton tab-active" onclick="openList(event, 'hydrotechnic-saf-mTele-zPP-checklist')">Checklist</a>
+					<a class="tabbutton" onclick="openList(event, 'hydrotechnic-saf-mTele-zPP-logo')">Logo</a>
+					<a class="tabbutton" onclick="reset()">Reset</a>
+				</div>
+
+				<div class="tabcontent active" id="hydrotechnic-saf-mTele-zPP-checklist">checklist</div>
+				<div class="tabcontent" id="hydrotechnic-saf-mTele-zPP-logo">logo</div>
+			</div>
+
+			<div id="saf-mTele-zPP-belleaqua" class="tab">
+				<h1 class="title">BelleAqua</h1>
+
+				<div class="flex-dir">
+					<a class="tabbutton tab-active" onclick="openList(event, 'belleaqua-saf-mTele-zPP-checklist')">Checklist</a>
+					<a class="tabbutton" onclick="openList(event, 'belleaqua-saf-mTele-zPP-logo')">Logo</a>
+					<a class="tabbutton" onclick="openList(event, 'belleaqua-saf-mTele-zPP-cmr')">CMR</a>
+					<a class="tabbutton" onclick="reset()">Reset</a>
+				</div>
+
+				<div class="tabcontent active" id="belleaqua-saf-mTele-zPP-checklist">
+					<div class="checkbox">Binnenwerk vastzetten in de kast</div>
+					<div class="checkbox">Voetjes in kast</div>
+					<div class="checkbox">ID nr in buitenkast</div>
+					<div class="checkbox">afdekplaat met deelbare afdekstrip in kast</div>
+					<div class="checkbox">afdekplaat met 4 kunststof moeren vastgezet</div>
+					<div class="checkbox">binnenkant sticker (groot) ingeplakt maar niets noteren</div>
+					<div class="checkbox">elektrisch schema in document houder</div>
+					<div class="checkbox">rubber 90° voor blower twee maal vastgezet met metalen klemring</div>
+					<div class="checkbox">blad volledig ingevuld ( KP nummer , werfadres , serienummer blower , datum , ID nr rechts onderaan )</div>
+					<div class="checkbox">foto van het invulblad mailen naar : magazijn@belleaqua.be</div>
+					<div class="checkbox">sticker BelleAqua vooraan</div>
+					<div class="checkbox">kort blauw (slibretour) en zwart (debietregeling) buisje in aansluiting steken</div>
+				</div>
+				<div class="tabcontent" id="belleaqua-saf-mTele-zPP-logo">logo</div>
+				<div class="tabcontent" id="belleaqua-saf-mTele-zPP-cmr">cmr</div>
+			</div>
+		</div>
+
+		<div class="category">
 			<h1 class="title">SAF mTele mPP</h1>
 			<div class="flex-dir">
 				<a onclick="openTab(event, 'saf-mTele-mPP-aquafin')"><div class="component" id="aquafin">AQF</div></a>
