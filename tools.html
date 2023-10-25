@@ -1,0 +1,27 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" href="index.css" />
+
+		<script defer src="models/header.js"></script>
+		<script defer src="models/tools.js"></script>
+		<script defer src="models/login.js"></script>
+	</head>
+	<body>
+		<header></header>
+
+		<div class="" id="file-renamer">
+			<form id="uploadForm" enctype="multipart/form-data">
+				<input type="file" id="fileInput" name="files[]" multiple accept="image/*,video/*" />
+				<button type="button" id="uploadButton">Upload Files</button>
+			</form>
+
+			<div id="imgs"></div>
+		</div>
+	</body>
+</html>
